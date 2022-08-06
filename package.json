@@ -15,6 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "echo \"[ PLEASE MAKE PULL REQUEST TO DEPLOY ]\" && exit 1",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
