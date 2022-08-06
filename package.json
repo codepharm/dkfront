@@ -2,7 +2,7 @@
   "name": "dkfront",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://codepharm.github.io/dkfront",
+  "homepage": "https://codepharm.github.io/",
   "dependencies": {
     "bootstrap": "^5.2.0",
     "framer-motion": "^6.5.1",
