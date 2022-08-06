@@ -9,6 +9,7 @@ import Gallery from '../pages/Gallery';
 import Contact from '../pages/Contact';
 
 import '../styles/global.css';
+import '../styles/typography.css';
 
 function App() {
   return (
