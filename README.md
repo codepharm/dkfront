@@ -12,7 +12,7 @@ Be sure to run `nvm use` to use the version of node specified in `.nvmrc`.
 
 MIT License
 
-Organically grown at the `[codePharm]` <img src='https://codetracklift.github.io/codeTrackLift/logos/giphyPharma2Code.gif' alt='codeByPete logo' width='25'> Copyright (c) 2022 
+Organically developed at the `[codePharm]` <img src='https://codetracklift.github.io/codeTrackLift/logos/giphyPharma2Code.gif' alt='codeByPete logo' width='25'> Copyright (c) 2022 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
