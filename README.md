@@ -6,6 +6,8 @@
 
 Be sure to run `nvm use` to use the version of node specified in `.nvmrc`.
 
+Please be sure to run `npm install` or `npm i` once you pull down the repo.  This will install your `node_modules`
+
 ## Scripts
 
 - `npm start`
