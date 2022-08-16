@@ -2,52 +2,49 @@ import React from 'react'
 import dontStop from './assets/dontStop.jpg'
 import giveAll from './assets/giveAll.jpg'
 import dramaticImage from './assets/dramaticImage.JPG'
+import Carousel from 'react-bootstrap/Carousel'
 
 const Home = () => {
   return (
-    <div id="carouselExampleCaptions" class="container carousel slide carousel-fade" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="2000">
-          <img src={dramaticImage} class="d-block w-100" alt="..." />
-          <div class="carousel-caption  ">
-            <h5>Get Ready!</h5>
-            <p>Be the Best Version of Yourelf.</p>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src={dontStop} class="d-block w-100" alt="..." />
-          <div class="carousel-caption  ">
-            <h5>Don't Give Up!</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src={giveAll} class="d-block w-100" alt="..." />
-          <div class="carousel-caption  ">
-            <h5>Give It Your All!</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    <Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={dramaticImage}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>Get Ready!</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={dontStop}
+          alt="Second slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Don't Give Up!</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={giveAll}
+          alt="Third slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Give It Your All!</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   )
 }
 
