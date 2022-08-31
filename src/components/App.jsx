@@ -1,6 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import NavBar from './NavBar';
-import Home from '../pages/Home';
+
+import NavBar from './NavBar/NavBar';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+
+import Home from '../pages/Home/Home';
 import About from '../pages/About';
 import Services from '../pages/Services';
 import Nutrition from '../pages/Nutrition';
@@ -15,6 +19,7 @@ function App() {
   return (
     <div>
       <NavBar />
+      <Header />
       <Routes>
         <Route path='/*' element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -24,6 +29,7 @@ function App() {
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
