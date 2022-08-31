@@ -3,7 +3,7 @@
 }
 
 .dk {
-  color: red;
+  color: red !important;
   font-weight: 900;
 }
 
