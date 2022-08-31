@@ -33,8 +33,8 @@ const Home = () => {
       </div>
     </div>
     <div className={`${styles.bottom} container-fluid`}>
-      <h4 className={`text-center my-4`}>Lorem, ipsum dolor.</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempora ad dolorum odit adipisci veniam rerum debitis omnis laborum cumque.</p>
+      <h4 className={`text-center my-4 fw-light`}>Lorem, ipsum dolor.</h4>
+      <p className={`fw-lighter`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempora ad dolorum odit adipisci veniam rerum debitis omnis laborum cumque.</p>
     </div>
    </div>
   )
