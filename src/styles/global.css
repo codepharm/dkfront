@@ -7,7 +7,27 @@ html {
 }
 
 body {
+  background-color: black;
   display: flex;
   justify-content: center;
-  background-color: ghostwhite;
+}
+
+.bg {
+  background-color: darkred;
+  -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+}
+
+@media (max-width: 1000px) {
+  .bg {
+    -webkit-clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+  }
+}
+
+@media (max-width: 768px) {
+  .bg {
+    -webkit-clip-path: polygon(0 0, 100% 1.5%, 100% 100%, 0 98.5);
+    clip-path: polygon(0 0, 100% 1.5%, 100% 100%, 0 98.5%);
+  }
 }

@@ -1,3 +1,12 @@
 a,a:visited {
+  color: red;
   text-decoration: none;
+}
+
+.textRed {
+  color: red;
+}
+
+.textSilver {
+  color: silver;
 }

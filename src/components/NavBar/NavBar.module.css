@@ -1,0 +1,37 @@
+.brand {
+  transition: color 0.25s ease-in-out;
+}
+
+.dk {
+  font-weight: 900;
+}
+
+.dojo {
+  color: white;
+  font-weight: 100;
+}
+
+
+.toggler {
+  border: 1px solid white;
+}
+
+.linkWrapper {
+  gap: 1.5rem;
+}
+
+.link {
+  color: red;
+  font-weight: 100;
+  transition: color 0.25s ease-in-out;
+}
+
+.link:hover {
+  color: white;
+}
+
+@media (min-width: 900px) {
+  .linkWrapper {
+    gap: 2rem;
+  }
+}
