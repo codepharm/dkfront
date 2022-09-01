@@ -13,8 +13,8 @@ export default function Footer() {
       <footer className={`${styles.footer}`}>
         <p className={`textSilver`}>Copyright © {currentYear}
           <span className='fst-italic textShadow'>
-            <span style={{ color: "#00857c" }}> code</span>
-            <span style={{ color: "lime" }}>Pharm</span>
+            <span style={{ color: "lime" }}> code</span>
+            <span style={{ color: "#00857c" }}>Pharm</span>
             <img src={logo} style={{ height: '2rem', padding: '0 0.25rem' }} alt="codePharm" />
             <span style={{ color: "silver" }}>Developers</span>
           </span>
