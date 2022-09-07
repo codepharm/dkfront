@@ -110,7 +110,7 @@ const Form = () => {
   }
 
   return (
-    <form className={`${styles.form} mx-auto`}>
+    <form className={`${styles.form} mx-auto container-fluid`}>
       <div className={`${styles.row} row`}>
         <label className={`${styles.label} col-lg-2 text-white`} htmlFor="">Name: </label>
         <input

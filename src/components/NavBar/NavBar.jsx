@@ -1,23 +1,25 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
 import styles from './NavBar.module.css';
 
 const NavBar = () => {
+  const [expanded, setExpanded] = useState(false);
 
   return (
-    <Navbar bg="black" variant='dark' expand="sm" className={`${styles.navWrapper} sticky-top`}>
+    <Navbar bg="black" variant='dark' expand="sm" className={`${styles.navWrapper} sticky-top`}  expanded={expanded}>
       <Container className={`${styles.container}`}>
         <Navbar.Brand className={`${styles.brand}`} href="#"><span className={`${styles.dk}`}>DK</span><span className={`${styles.dojo}`}>Dojo</span></Navbar.Brand>
-        <Navbar.Toggle className={`${styles.toggler}`} aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle className={`${styles.toggler}`} aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className={`${styles.linkWrapper}`}>
-            <Link className={`${styles.link}`} to='/'>Home</Link>
-            <Link className={`${styles.link}`} to='/about'>About</Link>
-            <Link className={`${styles.link}`} to='/services'>Services</Link>
+            <Link className={`${styles.link}`} onClick={() => setExpanded(false)} to='/'>Home</Link>
+            <Link className={`${styles.link}`} onClick={() => setExpanded(false)} to='/about'>About</Link>
+            <Link className={`${styles.link}`} onClick={() => setExpanded(false)} to='/services'>Services</Link>
             {/* <Link className={`${styles.link}`} to='/nutrition'>Nutrition</Link> */}
             {/* <Link className={`${styles.link}`} to='/products'>Products</Link> */}
-            <Link className={`${styles.link}`} to='/gallery'>Gallery</Link>
+            <Link className={`${styles.link}`} onClick={() => setExpanded(false)} to='/gallery'>Gallery</Link>
             {/* <Link className={`${styles.link}`} to='/contact'>Contact</Link> */}
           </Nav>
         </Navbar.Collapse>
