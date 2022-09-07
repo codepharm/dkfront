@@ -1,36 +1,36 @@
 import React from 'react'
 import { AiOutlineDollarCircle } from 'react-icons/ai';
-import { BsClockHistory, BsTrophy } from 'react-icons/bs';
-import { FaRegThumbsUp } from 'react-icons/fa';
-import { GiWeightLiftingUp } from 'react-icons/gi';
+import { BsTrophy } from 'react-icons/bs';
+import { FaPoop, FaPiggyBank } from 'react-icons/fa';
+import { GiArmoredPants } from 'react-icons/gi';
 import { TbBarbell } from 'react-icons/tb';
 import addBrand from '../../utils/addBrand';
 import gym from '../../assets/images/gym.jpg'
 import weight from '../../assets/images/weights.jpg'
 
-import styles from './Home.module.css';
+import styles from './Services.module.css';
 
-const Home = () => {
+const Services = () => {
   return (
-   <div className={`${styles.home} text-white py-5`}>
+   <div className={`${styles.about} text-white py-5`}>
     <div className={`${styles.intro} mx-auto text-center px-3`}>
-      <h2 className={`my-5 fw-light`}>Dojo Rules</h2>
-      <h4 className={`fw-lighter`}>Welcome to {addBrand()}, please familiarize yourself with our rules below.</h4>
+      <h2 className={`my-5 fw-light`}>{addBrand()} Services </h2>
+      <h4 className={`fw-lighter`}>The things you own end up owning you. It's at only after you lose everything that you're free to do anything at {addBrand()} .</h4>
     </div>
     <div className={`row text-center my-5`}>
       <div className={`${styles.col} col-sm-6 col-md-4`}>
-        <BsClockHistory size={40} />
-        <h5>First Rule</h5>
+        <FaPiggyBank size={40} />
+        <h5>Not Your Job</h5>
         <p className='fw-lighter'>The first rule of {addBrand()} is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.</p>
       </div>
       <div className={`${styles.col} col-sm-6 col-md-4`}>
-        <GiWeightLiftingUp size={40} />
-        <h5>Second Rule</h5>
+        <GiArmoredPants size={40} />
+        <h5>Not Your Pants</h5>
         <p className='fw-lighter'>The second rule of {addBrand()} is, "you DO NOT talk about DK Dojo." Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!</p>
       </div>
       <div className={`${styles.col} col-sm-6 col-md-4`}>
-        <FaRegThumbsUp size={40} />
-        <h5>Third Rule</h5>
+        <FaPoop size={40} />
+        <h5>Just Poop</h5>
         <p className='fw-lighter'>The third rule of {addBrand()}, "if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
@@ -79,4 +79,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Services
