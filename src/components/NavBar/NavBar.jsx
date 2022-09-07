@@ -6,7 +6,7 @@ import styles from './NavBar.module.css';
 const NavBar = () => {
 
   return (
-    <Navbar bg="black" variant='dark' expand="sm">
+    <Navbar bg="black" variant='dark' expand="sm" className='sticky-top'>
       <Container>
         <Navbar.Brand className={`${styles.brand}`} href="#home"><span className={`${styles.dk}`}>DK</span><span className={`${styles.dojo}`}>Dojo</span></Navbar.Brand>
         <Navbar.Toggle className={`${styles.toggler}`} aria-controls="basic-navbar-nav" />
