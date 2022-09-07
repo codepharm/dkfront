@@ -84,7 +84,7 @@ const Form = () => {
       setTimeout(() => window.scrollTo({top: 0, behavior: 'smooth'}), 250);
 
       // API call
-      fetch("https://formsubmit.co/ajax/codetracklift@gmail.com", {
+      fetch("https://formsubmit.co/ajax/f61adf2ff38bc5c4deb30cb261bf1ec0", {
       method: "POST",
       headers: { 
         'Content-Type': 'application/json',
