@@ -1,10 +1,19 @@
-.home {
-  max-width: 1200px;
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .intro,.bottom {
   margin-block: 6rem;
   max-width: 900px;
+}
+
+.bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
 }
 
 .col {
@@ -18,4 +27,5 @@
 
 .row {
   margin-block: 4rem;
+  max-width: 1200px;
 }

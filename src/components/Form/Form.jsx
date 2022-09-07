@@ -151,7 +151,7 @@ const Form = () => {
       <div className={`${styles.recaptchaWrapper} d-flex justify-content-center mt-2`}>
         <ReCAPTCHA
           ref={recaptchaRef}
-          sitekey={process.env.REACT_APP_SITE_KEY}
+          sitekey={`6Ld-UN8hAAAAAOZA9CcgATnpuNQtdTvugk2P8izj`}
           size={ width >= 375 ? 'normal' : 'compact'}
           onChange={recaptchaHandler}
           theme={'dark'}
