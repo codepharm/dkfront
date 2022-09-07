@@ -8,8 +8,8 @@ html {
 
 body {
   background-color: black;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 .bg {

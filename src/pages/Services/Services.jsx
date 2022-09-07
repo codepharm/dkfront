@@ -12,12 +12,12 @@ import styles from './Services.module.css';
 
 const Services = () => {
   return (
-   <div className={`${styles.about} text-white py-5`}>
+   <div className={`${styles.services} text-white py-5`}>
     <div className={`${styles.intro} mx-auto text-center px-3`}>
       <h2 className={`my-5 fw-light`}>{addBrand()} Services </h2>
       <h4 className={`fw-lighter`}>The things you own end up owning you. It's at only after you lose everything that you're free to do anything at {addBrand()} .</h4>
     </div>
-    <div className={`row text-center my-5`}>
+    <div className={`${styles.row} row text-center my-5`}>
       <div className={`${styles.col} col-sm-6 col-md-4`}>
         <FaPiggyBank size={40} />
         <h5>Not Your Job</h5>
@@ -34,7 +34,7 @@ const Services = () => {
         <p className='fw-lighter'>The third rule of {addBrand()}, "if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
-    <div className="bg py-5">
+    <div className={`${styles.bg} bg py-5`}>
       <div className={`${styles.row} row container-fluid`}>
         <div className={`col-sm-5`}>
           <img src={gym} className={`${styles.img} p-4 img-fluid`} alt='Gym equipment in the background' />

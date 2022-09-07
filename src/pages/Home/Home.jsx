@@ -17,7 +17,7 @@ const Home = () => {
       <h2 className={`my-5 fw-light`}>Dojo Rules</h2>
       <h4 className={`fw-lighter`}>Welcome to {addBrand()}, please familiarize yourself with our rules below.</h4>
     </div>
-    <div className={`row text-center my-5`}>
+    <div className={`${styles.row} row text-center my-5`}>
       <div className={`${styles.col} col-sm-6 col-md-4`}>
         <BsClockHistory size={40} />
         <h5>First Rule</h5>
@@ -34,7 +34,7 @@ const Home = () => {
         <p className='fw-lighter'>The third rule of {addBrand()}, "if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
-    <div className="bg py-5">
+    <div className={`${styles.bg} bg py-5`}>
       <div className={`${styles.row} row container-fluid`}>
         <div className={`col-sm-5`}>
           <img src={gym} className={`${styles.img} p-4 img-fluid`} alt='Gym equipment in the background' />
