@@ -12,7 +12,7 @@ import styles from './Home.module.css';
 
 const Home = () => {
   return (
-   <div className={`${styles.home} text-white py-5`}>
+   <div className={`${styles.home} text-white py-5 container-fluid`}>
     <div className={`${styles.intro} mx-auto text-center px-3`}>
       <h2 className={`my-5 fw-light`}>Dojo Rules</h2>
       <h4 className={`fw-lighter`}>Welcome to {addBrand()}, please familiarize yourself with our rules below.</h4>

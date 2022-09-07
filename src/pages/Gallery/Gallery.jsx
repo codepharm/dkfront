@@ -12,7 +12,7 @@ import styles from './Gallery.module.css';
 
 const Gallery = () => {
   return (
-   <div className={`${styles.gallery} text-white py-5`}>
+   <div className={`${styles.gallery} text-white py-5 container-fluid`}>
     <div className={`${styles.intro} mx-auto text-center px-3`}>
       <h2 className={`my-5 fw-light`}>{addBrand()} Gallery </h2>
       <h4 className={`fw-lighter`}>The things you own end up owning you. It's at only after you lose everything that you're free to do anything at {addBrand()} .</h4>

@@ -12,7 +12,7 @@ import styles from './About.module.css';
 
 const About = () => {
   return (
-   <div className={`${styles.about} text-white py-5`}>
+   <div className={`${styles.about} text-white py-5 container-fluid`}>
     <div className={`${styles.intro} mx-auto text-center px-3`}>
       <h2 className={`my-5 fw-light`}>About {addBrand()}</h2>
       <h4 className={`fw-lighter`}>At {addBrand()}, you are not your job, you're not how much money you have in the bank. You are not the car you drive. You're not the contents of your wallet. You are not your fucking khakis. You are all singing, all dancing crap of the world.</h4>
