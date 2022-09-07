@@ -2,6 +2,16 @@
   max-width: 1200px;
 }
 
-.bottom{
+.intro,.bottom {
+  margin-block: 6rem;
   max-width: 900px;
+}
+
+.col {
+  margin-block: 5rem;
+  padding-inline: 2rem;
+}
+
+.col>* {
+  margin-block: 1rem;
 }

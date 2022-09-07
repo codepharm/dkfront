@@ -1,5 +1,10 @@
 import React from 'react'
-
+import { AiOutlineDollarCircle } from 'react-icons/ai';
+import { BsClockHistory, BsTrophy } from 'react-icons/bs';
+import { FaRegThumbsUp } from 'react-icons/fa';
+import { GiWeightLiftingUp } from 'react-icons/gi';
+import { TbBarbell } from 'react-icons/tb';
+import addBrand from '../../utils/addBrand';
 import gym from '../../assets/images/gym.jpg'
 import weight from '../../assets/images/weights.jpg'
 
@@ -8,9 +13,26 @@ import styles from './Home.module.css';
 const Home = () => {
   return (
    <div className={`${styles.home} text-white py-5`}>
-    <div className={`px-3 my-5`}>
-      <h2 className={`text-center my-5 fw-light`}>Home</h2>
-      <p className={`fw-lighter`}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, culpa ut. Harum delectus totam expedita hic repellat ea similique deserunt?</p>
+    <div className={`${styles.intro} mx-auto text-center px-3`}>
+      <h2 className={`my-5 fw-light`}>Dojo Rules</h2>
+      <h4 className={`fw-lighter`}>Welcome to {addBrand()}, please familiarize yourself with our rules below.</h4>
+    </div>
+    <div className={`${styles.row} row text-center my-5`}>
+      <div className={`${styles.col} col-sm-6 col-md-4`}>
+        <BsClockHistory size={30} />
+        <h5>First Rule</h5>
+        <p className='fw-lighter'>The first rule of {addBrand()} is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.</p>
+      </div>
+      <div className={`${styles.col} col-sm-6 col-md-4`}>
+        <GiWeightLiftingUp size={30} />
+        <h5>Second Rule</h5>
+        <p className='fw-lighter'>The second rule of {addBrand()} is, "you DO NOT talk about DK Dojo." Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!</p>
+      </div>
+      <div className={`${styles.col} col-sm-6 col-md-4`}>
+        <FaRegThumbsUp size={30} />
+        <h5>Third Rule</h5>
+        <p className='fw-lighter'>The third rule of {addBrand()}, "if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
     </div>
     <div className="bg py-5">
       <div className={`row container-fluid`}>
@@ -30,6 +52,23 @@ const Home = () => {
         <div className={`col-sm-5`}>
           <img src={weight} className={`${styles.img} p-4 img-fluid`} alt='Gym equipment in the background' />
         </div>
+      </div>
+    </div>
+    <div className={`${styles.row} row text-center my-5`}>
+      <div className={`${styles.col} col-sm-6 col-md-4`}>
+        <TbBarbell size={30} />
+        <h5>Lorem ipsum dolor sit amet.</h5>
+        <p className='fw-lighter'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!</p>
+      </div>
+      <div className={`${styles.col} col-sm-6 col-md-4`}>
+        <AiOutlineDollarCircle size={30} />
+        <h5>Lorem ipsum dolor sit amet.</h5>
+        <p className='fw-lighter'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!</p>
+      </div>
+      <div className={`${styles.col} col-sm-6 col-md-4`}>
+        <BsTrophy size={30} />
+        <h5>Lorem ipsum dolor sit amet.</h5>
+        <p className='fw-lighter'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!</p>
       </div>
     </div>
     <div className={`${styles.bottom} container-fluid`}>
