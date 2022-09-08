@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import spanMap from '../../../utils/spanMap';
 import styles from './RowSingleImg.module.css';
 
@@ -10,7 +11,12 @@ const RowSingleImg = ({img, alt, heading, text, textStyles}) => {
         <p className={`fw-lighter ${textStyles}`}>
           { spanMap(text) }
         </p>
-        <img src={img} alt={alt} className={`${styles.img} img-fluid p-4`}/>
+        <motion.img
+          src={img} alt={alt} className={`${styles.img} img-fluid p-4`}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5}}
+        />
     </div>
   )
 }
