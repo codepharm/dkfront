@@ -6,7 +6,8 @@
 
 .header {
   background-image: url('../../assets/images/fitness.jpg');
-  background-position: center;
+  background-position: bottom center;
+  background-attachment: fixed;
   height: 40rem;
   max-width: 1200px;
 
