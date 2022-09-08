@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify'
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -6,7 +6,7 @@ import checkEmail from '../../utils/checkEmail';
 import useWindowDimensions from '../../utils/windowDimensions';
 import styles from './Form.module.css';
 
-const Form = () => {
+const Form = ({recaptchaRef}) => {
   const [disable, setDisable] = useState(true)
   const [token, setToken] = useState('');
   const [values, setValues] = useState({
@@ -14,7 +14,7 @@ const Form = () => {
     email: '',
     message: '',
   });
-  const recaptchaRef = useRef(null);
+  
   const { width } = useWindowDimensions();
 
   useEffect(() => {
@@ -110,7 +110,7 @@ const Form = () => {
   }
 
   return (
-    <form className={`${styles.form} mx-auto container-fluid`}>
+    <form id='contact' className={`${styles.form} mx-auto container-fluid`}>
       <div className={`${styles.row} row`}>
         <label className={`${styles.label} col-lg-2 text-white`} htmlFor="">Name: </label>
         <input
