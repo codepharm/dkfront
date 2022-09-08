@@ -16,7 +16,7 @@ import styles from './Home.module.css';
 
 const Home = () => {
   return (
-   <div className={`${styles.home} text-white py-5 container-fluid`}>
+   <div id='page' className={`${styles.home} text-white py-5 container-fluid`}>
     <RowTextOnly
       heading={[`Dojo Rules`]}
       text={[
@@ -28,27 +28,33 @@ const Home = () => {
     />
 
     <RowIcons
-      icon1={<BsClockHistory size={40} />}
-      heading1={[`First Rule`]}
-      text1={[
-        `The first rule of `,
-        addBrand(),
-        `is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.`
-      ]}
-      icon2={<GiWeightLiftingUp size={40} />}
-      heading2={[`Second Rule`]}
-      text2={[
-        `The second rule of `,
-        addBrand(),
-        ` is, "you DO NOT talk about DK Dojo." Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-      ]}
-      icon3={<FaRegThumbsUp size={40} />}
-      heading3={[`Third Rule`]}
-      text3={[
-        `The third rule of `,
-        addBrand(),
-        ` if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.`
-      ]}
+      icon1={{
+        icon: <BsClockHistory size={40} />,
+        heading: [`First Rule`],
+        text: [
+          `The first rule of `,
+          addBrand(),
+          `is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.`
+        ],
+      }}
+      icon2={{
+        icon: <GiWeightLiftingUp size={40} />,
+        heading: [`Second Rule`],
+        text: [
+          `The second rule of `,
+          addBrand(),
+          ` is, "you DO NOT talk about DK Dojo." Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+        ],
+      }}
+      icon3={{
+        icon: <FaRegThumbsUp size={40} />,
+        heading: [`Third Rule`],
+        text: [
+          `The third rule of `,
+          addBrand(),
+          ` if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.`
+        ],
+      }}
     />
 
     <div className={`${styles.bg} bg py-5`}>
@@ -73,25 +79,31 @@ const Home = () => {
     </div>
 
     <RowIcons
-      icon1={<TbBarbell size={40} />}
-      heading1={[`Best Equipment`]}
-      text1={[
-        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-      ]}
-      icon2={<AiOutlineDollarCircle size={40} />}
-      heading2={[`Cost Effective`]}
-      text2={[
-        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-      ]}
-      icon3={<BsTrophy size={40} />}
-      heading3={[`Reach Your Goals`]}
-      text3={[
-        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-      ]}
+       icon1={{
+        icon: <TbBarbell size={40} />,
+        heading: [`Best Equipment`],
+        text: [
+            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+          ],
+      }}
+      icon2={{
+        icon: <AiOutlineDollarCircle size={40} />,
+        heading: [`Cost Effective`],
+        text: [
+            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+          ],
+      }}
+      icon3={{
+        icon: <BsTrophy size={40} />,
+        heading: [`Reach Your Goals`],
+        text: [
+            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+          ],
+      }}
     />
 
     <RowTextOnly
-      heading={[`Join the Dojo TODAY!`]}
+      heading={[`Join `, addBrand(),` TODAY!`]}
       text={[
         `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempora ad dolorum odit adipisci veniam rerum debitis omnis laborum cumque.`
       ]}

@@ -6,17 +6,20 @@ import { GiArmoredPants } from 'react-icons/gi';
 import { TbBarbell } from 'react-icons/tb';
 
 import RowIcons from '../../components/Rows/RowIcons/RowIcons';
-import RowImgText from '../../components/Rows/RowImgText/RowImgText';
+import RowSingleImg from '../../components/Rows/RowSingleImg/RowSingleImg';
+import RowImages from '../../components/Rows/RowImages/RowImages';
 import RowTextOnly from '../../components/Rows/RowTextOnly/RowTextOnly';
 import addBrand from '../../utils/addBrand';
-import gym from '../../assets/images/gym.jpg'
-import weight from '../../assets/images/weights.jpg'
+import overhead from '../../assets/images/overhead.jpg'
+import groupRun from '../../assets/images/groupRun.jpg'
+import deadlift from '../../assets/images/deadlift.jpg'
+import treadmill from '../../assets/images/treadmill.jpg'
 
 import styles from './About.module.css';
 
 const About = () => {
   return (
-   <div className={`${styles.about} text-white py-5 container-fluid`}>
+   <div id='page' className={`${styles.about} text-white py-5 container-fluid`}>
      <RowTextOnly
       heading={[`About `, addBrand()]}
       text={[
@@ -28,70 +31,94 @@ const About = () => {
     />
 
     <RowIcons
-      icon1={ <FaPiggyBank size={40} />}
-      heading1={[`Not Your Job`]}
-      text1={[
-        `The first rule of `,
-        addBrand(),
-        `is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.`
-      ]}
-      icon2={ <GiArmoredPants size={40} />}
-      heading2={[`Not Your Khakis`]}
-      text2={[
-        `The second rule of `,
-        addBrand(),
-        ` is, "you DO NOT talk about DK Dojo." Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-      ]}
-      icon3={<FaPoop size={40} />}
-      heading3={[`Just Crap`]}
-      text3={[
-        `The third rule of `,
-        addBrand(),
-        ` if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.`
-      ]}
+      icon1={{
+        icon: <FaPiggyBank size={40} />,
+        heading: [`Not Your Job`],
+        text: [
+          `The first rule of `,
+          addBrand(),
+          `is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.`
+        ],
+      }}
+      icon2={{
+        icon: <GiArmoredPants size={40} />,
+        heading: [`Not Your Khakis`],
+        text: [
+          `The second rule of `,
+          addBrand(),
+          ` is, "you DO NOT talk about DK Dojo." Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+        ],
+      }}
+      icon3={{
+        icon: <FaPoop size={40} />,
+        heading: [`Just Crap`],
+        text: [
+          `The third rule of `,
+          addBrand(),
+          ` if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.`
+        ],
+      }}
     />
 
-    <div className={`${styles.bg} bg py-5`}>
-      <RowImgText
-        img={gym}
-        alt={`Gym equipment in the background`}
-        heading={[`Lorem, ipsum dolor`]}
-        text={[
-          `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eos obcaecati voluptates quibusdam rem vitae iusto. Suscipit eos alias mollitia.`,
-        ]}
+<div className={`${styles.bg} bg py-5`}>
+      <RowSingleImg
+        img={overhead}
+        alt={`A winning athlete performing an overhead press with perfect form.`}
+        heading={[`Winning.`]}
+        text={[`Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deserunt a molestiae incidunt obcaecati corporis harum itaque esse alias magnam!`]}
       />
-
-      <RowImgText
-        img={weight}
-        alt={`Gym equipment in the background`}
-        heading={[`Lorem, ipsum dolor`]}
-        text={[
-          `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eos obcaecati voluptates quibusdam rem vitae iusto. Suscipit eos alias mollitia.`,
-        ]}
-        imgRight
+      
+      <RowImages
+        image1={{
+          img: treadmill,
+          alt: `Silhouette of a group of people running for fitness.`,
+          heading: [`Warm-up`],
+          text: [`Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dolorum beatae non!`],
+          icon: [<span className={`fw-light py-2 px-3 fs-4`} style={{borderRadius: '50%', border: '2px solid white'}}>1</span>]
+        }}
+        image2={{
+          img: deadlift,
+          alt: `Silhouette of a group of people running for fitness.`,
+          heading: [`Lift`],
+          text: [`Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio beatae non!`],
+          icon: [<span className={`fw-light py-2 px-3 fs-4`} style={{borderRadius: '50%', border: '2px solid white'}}>2</span>]
+        }}
+        image3={{
+          img: groupRun,
+          alt: `Silhouette of a group of people running for fitness.`,
+          heading: [`Run`],
+          text: [`Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odionon!`],
+          icon: [<span className={`fw-light py-2 px-3 fs-4`} style={{borderRadius: '50%', border: '2px solid white'}}>3</span>]
+        }}
       />
     </div>
 
     <RowIcons
-      icon1={<TbBarbell size={40} />}
-      heading1={[`Best Equipment`]}
-      text1={[
-        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-      ]}
-      icon2={<AiOutlineDollarCircle size={40} />}
-      heading2={[`Cost Effective`]}
-      text2={[
-        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-      ]}
-      icon3={<BsTrophy size={40} />}
-      heading3={[`Reach Your Goals`]}
-      text3={[
-        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-      ]}
+      icon1={{
+        icon: <TbBarbell size={40} />,
+        heading: [`Best Equipment`],
+        text: [
+          `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+        ],
+      }}
+      icon2={{
+        icon: <AiOutlineDollarCircle size={40} />,
+        heading: [`Cost Effective`],
+        text: [
+          `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+        ],
+      }}
+      icon3={{
+        icon: <BsTrophy size={40} />,
+        heading: [`Reach Your Goals`],
+        text: [
+          `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+        ],
+      }}
     />
 
     <RowTextOnly
-      heading={[`Join the Dojo TODAY!`]}
+      heading={[`Join `, addBrand(),` TODAY!`]}
       text={[
         `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempora ad dolorum odit adipisci veniam rerum debitis omnis laborum cumque.`
       ]}
