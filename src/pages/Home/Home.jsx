@@ -4,6 +4,10 @@ import { BsClockHistory, BsTrophy } from 'react-icons/bs';
 import { FaRegThumbsUp } from 'react-icons/fa';
 import { GiWeightLiftingUp } from 'react-icons/gi';
 import { TbBarbell } from 'react-icons/tb';
+
+import RowIcons from '../../components/Rows/RowIcons/RowIcons';
+import RowImgText from '../../components/Rows/RowImgText/RowImgText';
+import RowTextOnly from '../../components/Rows/RowTextOnly/RowTextOnly';
 import addBrand from '../../utils/addBrand';
 import gym from '../../assets/images/gym.jpg'
 import weight from '../../assets/images/weights.jpg'
@@ -13,68 +17,86 @@ import styles from './Home.module.css';
 const Home = () => {
   return (
    <div className={`${styles.home} text-white py-5 container-fluid`}>
-    <div className={`${styles.intro} mx-auto text-center px-3`}>
-      <h2 className={`my-5 fw-light`}>Dojo Rules</h2>
-      <h4 className={`fw-lighter`}>Welcome to {addBrand()}, please familiarize yourself with our rules below.</h4>
-    </div>
-    <div className={`${styles.row} row text-center my-5`}>
-      <div className={`${styles.col} col-sm-6 col-md-4`}>
-        <BsClockHistory size={40} />
-        <h5>First Rule</h5>
-        <p className='fw-lighter'>The first rule of {addBrand()} is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.</p>
-      </div>
-      <div className={`${styles.col} col-sm-6 col-md-4`}>
-        <GiWeightLiftingUp size={40} />
-        <h5>Second Rule</h5>
-        <p className='fw-lighter'>The second rule of {addBrand()} is, "you DO NOT talk about DK Dojo." Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!</p>
-      </div>
-      <div className={`${styles.col} col-sm-6 col-md-4`}>
-        <FaRegThumbsUp size={40} />
-        <h5>Third Rule</h5>
-        <p className='fw-lighter'>The third rule of {addBrand()}, "if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-    </div>
+    <RowTextOnly
+      heading={[`Dojo Rules`]}
+      text={[
+        `Welcome to `,
+        addBrand(),
+        `, please familiarize yourself with the rules below.`
+      ]}
+      textStyles={`fs-4`}
+    />
+
+    <RowIcons
+      icon1={<BsClockHistory size={40} />}
+      heading1={[`First Rule`]}
+      text1={[
+        `The first rule of `,
+        addBrand(),
+        `is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.`
+      ]}
+      icon2={<GiWeightLiftingUp size={40} />}
+      heading2={[`Second Rule`]}
+      text2={[
+        `The second rule of `,
+        addBrand(),
+        ` is, "you DO NOT talk about DK Dojo." Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+      ]}
+      icon3={<FaRegThumbsUp size={40} />}
+      heading3={[`Third Rule`]}
+      text3={[
+        `The third rule of `,
+        addBrand(),
+        ` if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.`
+      ]}
+    />
+
     <div className={`${styles.bg} bg py-5`}>
-      <div className={`${styles.row} row container-fluid`}>
-        <div className={`col-sm-5`}>
-          <img src={gym} className={`${styles.img} p-4 img-fluid`} alt='Gym equipment in the background' />
-        </div>
-        <div className={`col-sm-7 m-auto py-5 px-4`}>
-          <h4 className={`fw-light`}>Lorem, ipsum dolor.</h4>
-          <p className={`fw-lighter`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eos obcaecati voluptates quibusdam rem vitae iusto. Suscipit eos alias mollitia.</p>
-        </div>
-      </div>
-      <div className={`${styles.row} row container-fluid`}>
-        <div className={`col-sm-7 m-auto py-5 px-4`}>
-          <h4 className={`fw-light`}>Lorem, ipsum dolor.</h4>
-          <p className={`fw-lighter`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eos obcaecati voluptates quibusdam rem vitae iusto. Suscipit eos alias mollitia.</p>
-        </div>
-        <div className={`col-sm-5`}>
-          <img src={weight} className={`${styles.img} p-4 img-fluid`} alt='Gym equipment in the background' />
-        </div>
-      </div>
+      <RowImgText
+        img={gym}
+        alt={`Gym equipment in the background`}
+        heading={[`Lorem, ipsum dolor`]}
+        text={[
+          `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eos obcaecati voluptates quibusdam rem vitae iusto. Suscipit eos alias mollitia.`,
+        ]}
+      />
+
+      <RowImgText
+        img={weight}
+        alt={`Gym equipment in the background`}
+        heading={[`Lorem, ipsum dolor`]}
+        text={[
+          `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eos obcaecati voluptates quibusdam rem vitae iusto. Suscipit eos alias mollitia.`,
+        ]}
+        imgRight
+      />
     </div>
-    <div className={`${styles.row} row text-center my-5`}>
-      <div className={`${styles.col} col-sm-6 col-md-4`}>
-        <TbBarbell size={40} />
-        <h5>Best Equipment</h5>
-        <p className='fw-lighter'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!</p>
-      </div>
-      <div className={`${styles.col} col-sm-6 col-md-4`}>
-        <AiOutlineDollarCircle size={40} />
-        <h5>Cost Effective</h5>
-        <p className='fw-lighter'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!</p>
-      </div>
-      <div className={`${styles.col} col-sm-6 col-md-4`}>
-        <BsTrophy size={40} />
-        <h5>Reach Your Goals</h5>
-        <p className='fw-lighter'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!</p>
-      </div>
-    </div>
-    <div className={`${styles.bottom} container-fluid`}>
-      <h4 className={`text-center my-4 fw-light`}>Join the Dojo TODAY!</h4>
-      <p className={`fw-lighter`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempora ad dolorum odit adipisci veniam rerum debitis omnis laborum cumque.</p>
-    </div>
+
+    <RowIcons
+      icon1={<TbBarbell size={40} />}
+      heading1={[`Best Equipment`]}
+      text1={[
+        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+      ]}
+      icon2={<AiOutlineDollarCircle size={40} />}
+      heading2={[`Cost Effective`]}
+      text2={[
+        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+      ]}
+      icon3={<BsTrophy size={40} />}
+      heading3={[`Reach Your Goals`]}
+      text3={[
+        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+      ]}
+    />
+
+    <RowTextOnly
+      heading={[`Join the Dojo TODAY!`]}
+      text={[
+        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempora ad dolorum odit adipisci veniam rerum debitis omnis laborum cumque.`
+      ]}
+      textStyles={`fs-5`}
+    />
    </div>
   )
 }
