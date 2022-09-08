@@ -22,22 +22,31 @@
   border-radius: 2px;
 }
 
-.linkWrapper {
-  gap: 1.5rem;
-}
-
-.link {
+.navlink {
   color: red;
-  font-weight: 100;
+  font-weight: 300;
+  padding-inline: 1rem;
   transition: color 0.25s ease-in-out;
 }
 
-.link:hover {
+.navlink:hover {
+  color: white;
+}
+
+.navlink.active {
   color: white;
 }
 
 @media (min-width: 900px) {
-  .linkWrapper {
+  .navlinkWrapper {
     gap: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .navlinkWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
 }

@@ -1,3 +1,4 @@
+import spanMap from '../../../utils/spanMap';
 import styles from './RowImgText.module.css';
 
 const RowImgText = ({img, alt, heading, text, imgRight}) => {
@@ -6,18 +7,10 @@ const RowImgText = ({img, alt, heading, text, imgRight}) => {
       <div className={`${styles.row} row container-fluid`}>
         <div className={`col-sm-7 m-auto py-5 px-4`}>
           <h4 className={`fw-light`}>
-            {
-              heading.map((e, index) => {
-                return <span key={index}>{e}</span>
-              })
-            }
+            { spanMap(heading) }
             </h4>
           <p className={`fw-lighter`}>
-            {
-              text.map((e, index) => {
-                return <span key={index}>{e}</span>
-              })
-            }
+            { spanMap(text) }
           </p>
         </div>
         <div className={`col-sm-5`}>
@@ -33,18 +26,10 @@ const RowImgText = ({img, alt, heading, text, imgRight}) => {
       </div>
       <div className={`col-sm-7 m-auto py-5 px-4`}>
         <h4 className={`fw-light`}>
-          {
-            heading.map((e, index) => {
-              return <span key={index}>{e}</span>
-            })
-          }
+          { spanMap(heading) }
         </h4>
         <p className={`fw-lighter`}>
-          {
-            text.map((e, index) => {
-              return <span key={index}>{e}</span>
-            })
-          }
+          { spanMap(text) }
         </p>
       </div>
     </div>

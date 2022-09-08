@@ -1,0 +1,15 @@
+.row {
+  display: flex;
+  justify-content: center;
+  margin-block: 4rem;
+  max-width: 1200px;
+}
+
+.col {
+  margin-block: 5rem;
+  padding-inline: 2rem;
+}
+
+.col>* {
+  margin-block: 1rem;
+}
