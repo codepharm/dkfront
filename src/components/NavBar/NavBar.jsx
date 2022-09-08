@@ -45,6 +45,10 @@ const injectNavLinks = (onClick) => {
 
 const NavBar = () => {
   const [expanded, setExpanded] = useState(false);
+  const handleContact = () => {
+    setTimeout(() => document.querySelector(`#contact`).scrollIntoView({ block: "center", behavior: "smooth" }))
+    setExpanded(false);
+  }
 
   return (
     <Navbar bg="black" variant='dark' expand="sm" className={`${styles.navWrapper} sticky-top`}  expanded={expanded}>
@@ -55,7 +59,7 @@ const NavBar = () => {
           { injectNavLinks(() => setExpanded(false)) }
           <div
             className={`${styles.navlink}`}
-            onClick={() => document.querySelector(`#contact`).scrollIntoView({ block: "center", behavior: "smooth" })}
+            onClick={() => handleContact()}
           >
             CONTACT
           </div>

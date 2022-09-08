@@ -22,16 +22,17 @@ function App() {
   useEffect(() => {
     setPath(location.pathname)
     if (location.pathname === '/') {
-      setTimeout(() => document.querySelector(`#header`).scrollIntoView({ block: "center", behavior: "smooth" }));
+      setTimeout(() => document.querySelector(`#header`).scrollIntoView({ block: "start", behavior: "smooth" }));
       return;
     }
-    setTimeout(() => document.querySelector(`#page`).scrollIntoView({ block: "start", behavior: "smooth" }));
+    setTimeout(() => document.querySelector(`#theFold`).scrollIntoView({ block: "start", behavior: "smooth" }));
   }, [location, path]);
 
   return (
     <div>
       <NavBar />
       <Header />
+      <div id='theFold' style={{height:'5rem'}}></div>
       <Routes>
         <Route path='/*' element={<Home />} />
         <Route path='/about' element={<About />} />
