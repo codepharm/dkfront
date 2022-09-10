@@ -21,7 +21,7 @@ const Gallery = () => {
   return (
    <div id='page' className={`${styles.gallery} text-white py-5 container-fluid`}>
      <RowTextOnly
-      heading={[`Gallery `, addBrand()]}
+      heading={[addBrand(), `'s Gallery`]}
       text={[
         `The things you own end up owning you. It's at only after you lose everything that you're free to do anything at `,
         addBrand(),
