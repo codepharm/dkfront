@@ -12,7 +12,7 @@ const injectMotionImage = (image) => {
         transition={{ duration: 0.5 }}
       />
       <div className={`row`}>
-        <div className={`col-3`}>
+        <div className={`${styles.icon} col-3`}>
           { spanMap(image.icon) }
         </div>
         <div className={`col-9`}>

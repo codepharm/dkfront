@@ -13,3 +13,8 @@
 .col>* {
   margin-block: 1rem;
 }
+
+.icon {
+  display: flex;
+  transform: translateX(-1rem);
+}
