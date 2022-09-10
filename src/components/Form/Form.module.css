@@ -50,13 +50,21 @@
   margin-left: 1rem;
 }
 
+.invalid {
+  color: red;
+  height: 0;
+  position: relative;
+  transform: translateY(-2.25rem);
+}
+
 .button {
   border: 1px solid white;
   border-radius: 2px;
-  
+  background-color: transparent;
   color: white;
+  font-weight: 100;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 100;
   margin: 0 1px;
   padding: 1rem 2rem;
   transition: background 0.25s ease-in-out;
@@ -64,22 +72,7 @@
   width: fit-content;
 }
 
-.button {
-  background-color: mediumseagreen;
-  margin-top: 2rem;
-}
-
 .button:hover {
-  background-color: #2B60DE;
+  background-color: darkred;
   color: white;
-}
-
-.button:disabled {
-  background-color: transparent;
-  font-weight: 100;
-}
-
-.button:disabled:hover {
-  background-color: red;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
