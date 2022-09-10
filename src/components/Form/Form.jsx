@@ -7,6 +7,7 @@ import useWindowDimensions from '../../utils/windowDimensions';
 import styles from './Form.module.css';
 
 const Form = ({recaptchaRef}) => {
+  const [invalidEmail, setInvalidEmail] = useState(false);
   const [disable, setDisable] = useState(true)
   const [token, setToken] = useState('');
   const [values, setValues] = useState({
@@ -14,7 +15,6 @@ const Form = ({recaptchaRef}) => {
     email: '',
     message: '',
   });
-  
   const { width } = useWindowDimensions();
 
   useEffect(() => {
@@ -24,51 +24,53 @@ const Form = ({recaptchaRef}) => {
     }
   }, [values])
 
-  const handleInput = (event) => {
-    event.persist();
-    if (event.target.name === 'name') {
+  const handleInput = (e) => {
+    e.persist();
+    if (e.target.name === 'name') {
       setValues((values) => ({
         ...values,
-        name: event.target.value,
+        name: e.target.value,
       }));
     }
-    if (event.target.name === 'email') {
+    if (e.target.name === 'email') {
       setValues((values) => ({
         ...values,
-        email: event.target.value,
+        email: e.target.value,
       }));
-      if (!checkEmail(event.target.value)) {
+      if (!checkEmail(e.target.value)) {
         setDisable(true);
       }
     }
-    if (event.target.name === 'message') {
+    if (e.target.name === 'message') {
       setValues((values) => ({
         ...values,
-        message: event.target.value,
+        message: e.target.value,
       }));
     }
-    if (!event.target.value) {
+    if (!e.target.value) {
       setDisable(true);
+    }
+    if (e.target.value && e.target.type === 'email' && checkEmail(values.email) === true) {
+      setInvalidEmail(false)
     }
   }
 
   const onBlur = (e) => {
     if (!e.target.value && e.target.type === 'email') {
-      toast.error('Please enter your email');
       setDisable(true);
     } else if (!e.target.value && e.target.type !== 'email') {
-      toast.error('Please enter your ' + e.target.name);
       setDisable(true);
     }
     if (e.target.value && e.target.type === 'email' && checkEmail(values.email) === false) {
-      toast.error('Invalid email address');
       setDisable(true);
-      return
+      setInvalidEmail(true);
+    }
+    if (e.target.value && e.target.type === 'email' && checkEmail(values.email) === true) {
+      setInvalidEmail(false);
     }
   }
 
   const clearValues = () => {
-    recaptchaRef.current.reset();
     setValues({
       name: '',
       email: '',
@@ -78,10 +80,25 @@ const Form = ({recaptchaRef}) => {
 
   const clickHandler = (e) => {
     e.preventDefault();
+    if(disable) {
+      if(values.email && checkEmail(values.email) === false) {
+        toast.error('Invalid email address');
+        return;  
+      }
+      toast.error('Please complete the form');
+      return;
+    };
+    if(!token || token === '') {
+      toast.error(`Please verify you're not a robot, reload page if recaptcha is missing`);
+      return;
+    };
 
-    if (!disable) {
+    if (!disable && token && token !== '') {
       toast.info('Thank you for the message! Confirmation incoming...');
       setTimeout(() => window.scrollTo({top: 0, behavior: 'smooth'}), 250);
+      recaptchaRef.current.reset();
+      setToken('')
+      setDisable(true);
 
       // API call
       fetch("https://formsubmit.co/ajax/f61adf2ff38bc5c4deb30cb261bf1ec0", {
@@ -134,6 +151,12 @@ const Form = ({recaptchaRef}) => {
             onChange={handleInput}
             onBlur={onBlur}
           />
+        {
+          (values.email && invalidEmail) &&
+          <div className={`${styles.invalid} text-end`}>
+            Invalid Email
+          </div>
+        }
       </div>
       <div className={`${styles.row} row`}>
         <label className={`${styles.label} col-lg-2 text-white`} htmlFor="">Message:</label>
@@ -160,7 +183,6 @@ const Form = ({recaptchaRef}) => {
       <div className="text-center">
         <button
           className={`${styles.button}`}
-          disabled={ disable || !values.name || !values.email || !values.message || !token || token === '' }
           onClick={(e) => clickHandler(e)}
         >
           { disable || !token || token === '' ? 'Complete Form' : 'Send Message' }
