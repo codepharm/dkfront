@@ -58,7 +58,7 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav" className={`${styles.navlinkWrapper}`}>
           { injectNavLinks(() => setExpanded(false)) }
           <div
-            className={`${styles.navlink}`}
+            className={`${styles.navlink} ${styles.contact}`}
             onClick={() => handleContact()}
           >
             CONTACT

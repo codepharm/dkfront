@@ -37,6 +37,10 @@
   color: white;
 }
 
+.contact {
+  cursor: pointer;
+}
+
 @media (min-width: 900px) {
   .navlinkWrapper {
     gap: 2rem;

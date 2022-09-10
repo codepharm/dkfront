@@ -34,7 +34,7 @@ const Home = () => {
         text: [
           `The first rule of `,
           addBrand(),
-          `is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.`
+          ` is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.`
         ],
       }}
       icon2={{
