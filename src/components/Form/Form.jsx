@@ -185,7 +185,7 @@ const Form = ({recaptchaRef}) => {
           className={`${styles.button}`}
           onClick={(e) => clickHandler(e)}
         >
-          { disable || !token || token === '' ? 'Complete Form'.toUpperCase() : 'Send Message' }
+          { disable || !token || token === '' ? 'COMPLETE FORM' : 'Send Message' }
         </button>
       </div>
     </form>
