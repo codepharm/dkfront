@@ -10,8 +10,8 @@ const Header = () => {
       <div className={`${styles.header} textRed`}>
         <div className={`${styles.wrapper} col-8 col-sm-6`}>
           <h1 className={`${styles.h1}`}><span className={`${styles.dk}`}>DK</span><span className={`${styles.dojo}`}>Dojo</span></h1>
-          <h4 className={`${styles.h4}`}>Lorem ipsum dolor sit amet adipisicing elit.</h4>
-          <h6 className={`${styles.h6}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta labore at praesentium repellendus accusamus illo?</h6>
+          <h4 className={`${styles.h4}`}>“You can either suffer the pain of discipline or the pain of regret.” -Jim Rohn</h4>
+          <h6 className={`${styles.h6}`}>Stay disciplined. Stay true. Attack with consistent persistency.</h6>
           <button onClick={() => scrollToForm()} className={`${styles.button}`}>GET RESULTS</button>
         </div>
       </div>
