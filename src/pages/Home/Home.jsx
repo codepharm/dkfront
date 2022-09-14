@@ -1,9 +1,9 @@
 import React from 'react'
-import { AiOutlineDollarCircle } from 'react-icons/ai';
-import { BsClockHistory, BsTrophy } from 'react-icons/bs';
-import { FaRegThumbsUp } from 'react-icons/fa';
-import { GiWeightLiftingUp } from 'react-icons/gi';
+import { RiTeamLine } from 'react-icons/ri';
+import { MdOutlineComputer } from 'react-icons/md';
+import { GiWeightLiftingUp, GiThreeFriends } from 'react-icons/gi';
 import { TbBarbell } from 'react-icons/tb';
+import { TiInputCheckedOutline } from 'react-icons/ti';
 
 import RowIcons from '../../components/Rows/RowIcons/RowIcons';
 import RowImgText from '../../components/Rows/RowImgText/RowImgText';
@@ -29,12 +29,12 @@ const Home = () => {
 
     <RowIcons
       icon1={{
-        icon: <BsClockHistory size={40} />,
+        icon: <RiTeamLine size={40} />,
         heading: [`First Rule`],
         text: [
           `The first rule of `,
           addBrand(),
-          ` is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.`
+          ` is: Train to become a future leader, not a soldier.`
         ],
       }}
       icon2={{
@@ -43,16 +43,16 @@ const Home = () => {
         text: [
           `The second rule of `,
           addBrand(),
-          ` is, "you DO NOT talk about DK Dojo." Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+          ` is: Turn fitness into a lifestyle, not a hobby.`
         ],
       }}
       icon3={{
-        icon: <FaRegThumbsUp size={40} />,
+        icon: <TiInputCheckedOutline size={40} />,
         heading: [`Third Rule`],
         text: [
           `The third rule of `,
           addBrand(),
-          ` if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.`
+          ` is: Be informed to stay in form.`
         ],
       }}
     />
@@ -61,18 +61,18 @@ const Home = () => {
       <RowImgText
         img={gym}
         alt={`Gym equipment in the background`}
-        heading={[`Lorem, ipsum dolor`]}
+        heading={[`Beginner, Intermediate, Advanced?`]}
         text={[
-          `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eos obcaecati voluptates quibusdam rem vitae iusto. Suscipit eos alias mollitia.`,
+          `No matter what level you are, we'll make sure you receive something of value from the training offered here.`,
         ]}
       />
 
       <RowImgText
         img={weight}
         alt={`Gym equipment in the background`}
-        heading={[`Lorem, ipsum dolor`]}
+        heading={[`Home and Gym`]}
         text={[
-          `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eos obcaecati voluptates quibusdam rem vitae iusto. Suscipit eos alias mollitia.`,
+          `We can accommodate anything from at-home workouts to weight lifting at the gym.`,
         ]}
         imgRight
       />
@@ -81,23 +81,23 @@ const Home = () => {
     <RowIcons
        icon1={{
         icon: <TbBarbell size={40} />,
-        heading: [`Best Equipment`],
+        heading: [`1-On-1 Training`],
         text: [
-            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+            `Receive high-output results-based personal training services in the Philadelphia, Pennsylvania area.`
           ],
       }}
       icon2={{
-        icon: <AiOutlineDollarCircle size={40} />,
-        heading: [`Cost Effective`],
+        icon: <GiThreeFriends size={40} />,
+        heading: [`Group Session`],
         text: [
-            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+            `Join in group events that we host or create your own. We can discuss and develop strategies to best meet your goals.`
           ],
       }}
       icon3={{
-        icon: <BsTrophy size={40} />,
-        heading: [`Reach Your Goals`],
+        icon: <MdOutlineComputer size={40} />,
+        heading: [`Virtual Coaching`],
         text: [
-            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
+            `Stay motivated and be intentional on achieving your end goals by scheduling online sessions.`
           ],
       }}
     />
@@ -105,7 +105,7 @@ const Home = () => {
     <RowTextOnly
       heading={[`Join `, addBrand(),` TODAY!`]}
       text={[
-        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempora ad dolorum odit adipisci veniam rerum debitis omnis laborum cumque.`
+        `Reach out to me on Instagram or just shoot me an email here. Get pumped!`
       ]}
       textStyles={`fs-5`}
     />
