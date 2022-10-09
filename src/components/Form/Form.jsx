@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify'
 import ReCAPTCHA from 'react-google-recaptcha';
-
+import RowTextOnly from '../Rows/RowTextOnly/RowTextOnly';
+import addBrand from '../../utils/addBrand';
 import checkEmail from '../../utils/checkEmail';
 import useWindowDimensions from '../../utils/windowDimensions';
 import styles from './Form.module.css';
 
-const Form = ({recaptchaRef}) => {
+const Form = ({ recaptchaRef }) => {
   const [invalidEmail, setInvalidEmail] = useState(false);
   const [disable, setDisable] = useState(true)
   const [token, setToken] = useState('');
@@ -80,45 +81,45 @@ const Form = ({recaptchaRef}) => {
 
   const clickHandler = (e) => {
     e.preventDefault();
-    if(disable) {
-      if(values.email && checkEmail(values.email) === false) {
+    if (disable) {
+      if (values.email && checkEmail(values.email) === false) {
         toast.error('Invalid email address');
-        return;  
+        return;
       }
       toast.error('Please complete the form');
       return;
     };
-    if(!token || token === '') {
+    if (!token || token === '') {
       toast.error(`Please verify you're not a robot, reload page if recaptcha is missing`);
       return;
     };
 
     if (!disable && token && token !== '') {
       toast.info('Thank you for the message! Confirmation incoming...');
-      setTimeout(() => window.scrollTo({top: 0, behavior: 'smooth'}), 250);
+      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 250);
       recaptchaRef.current.reset();
       setToken('')
       setDisable(true);
 
       // API call
       fetch("https://formsubmit.co/ajax/f61adf2ff38bc5c4deb30cb261bf1ec0", {
-      method: "POST",
-      headers: { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify({
           name: values.name,
           email: values.email,
           message: values.message,
         })
       })
-      .then(response => response.json())
-      .then(data => {
-        setTimeout(() => toast.info(data.message), 500);
-        clearValues();
-      })
-      .catch(error => toast.error(error.message));
+        .then(response => response.json())
+        .then(data => {
+          setTimeout(() => toast.info(data.message), 500);
+          clearValues();
+        })
+        .catch(error => toast.error(error.message));
     }
   }
 
@@ -128,6 +129,13 @@ const Form = ({recaptchaRef}) => {
 
   return (
     <form id='contact' className={`${styles.form} mx-auto container-fluid`}>
+      <RowTextOnly
+        heading={[`Join `, addBrand(), ` TODAY!`]}
+        text={[
+          `Reach out to me on Instagram or just shoot me an email here. Get pumped!`
+        ]}
+        textStyles={`fs-5 textSilver`}
+      />
       <div className={`${styles.row} row`}>
         <label className={`${styles.label} col-lg-2 text-white`} htmlFor="">Name: </label>
         <input
@@ -142,15 +150,15 @@ const Form = ({recaptchaRef}) => {
       </div>
       <div className={`${styles.row} row`}>
         <label className={`${styles.label} col-lg-2 text-white`} htmlFor="">Email:</label>
-          <input
-            className={`${styles.input} col-lg-10`}
-            type="email"
-            placeholder="Email@domain.com"
-            name="email"
-            value={values.email}
-            onChange={handleInput}
-            onBlur={onBlur}
-          />
+        <input
+          className={`${styles.input} col-lg-10`}
+          type="email"
+          placeholder="Email@domain.com"
+          name="email"
+          value={values.email}
+          onChange={handleInput}
+          onBlur={onBlur}
+        />
         {
           (values.email && invalidEmail) &&
           <div className={`${styles.invalid} text-end`}>
@@ -160,7 +168,7 @@ const Form = ({recaptchaRef}) => {
       </div>
       <div className={`${styles.row} row`}>
         <label className={`${styles.label} col-lg-2 text-white`} htmlFor="">Message:</label>
-        <textarea 
+        <textarea
           className={`${styles.textarea} col-lg-10 text-white`}
           name="message"
           cols="30"
@@ -175,7 +183,7 @@ const Form = ({recaptchaRef}) => {
         <ReCAPTCHA
           ref={recaptchaRef}
           sitekey={`6Ld-UN8hAAAAAOZA9CcgATnpuNQtdTvugk2P8izj`}
-          size={ width >= 375 ? 'normal' : 'compact'}
+          size={width >= 375 ? 'normal' : 'compact'}
           onChange={recaptchaHandler}
           theme={'dark'}
         />
@@ -185,7 +193,7 @@ const Form = ({recaptchaRef}) => {
           className={`${styles.button}`}
           onClick={(e) => clickHandler(e)}
         >
-          { disable || !token || token === '' ? 'COMPLETE FORM' : 'SEND MESSAGE' }
+          {disable || !token || token === '' ? 'COMPLETE FORM' : 'SEND MESSAGE'}
         </button>
       </div>
     </form>

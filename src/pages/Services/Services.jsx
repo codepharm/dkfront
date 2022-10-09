@@ -101,14 +101,6 @@ const Services = () => {
           ],
       }}
     />
-
-    <RowTextOnly
-      heading={[`Join `, addBrand(),` TODAY!`]}
-      text={[
-        `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempora ad dolorum odit adipisci veniam rerum debitis omnis laborum cumque.`
-      ]}
-      textStyles={`fs-5`}
-    />
    </div>
   )
 }
