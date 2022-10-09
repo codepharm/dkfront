@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify'
 import ReCAPTCHA from 'react-google-recaptcha';
+import Instagram from '../Instagram/Instagram';
 import RowTextOnly from '../Rows/RowTextOnly/RowTextOnly';
 import addBrand from '../../utils/addBrand';
 import checkEmail from '../../utils/checkEmail';
@@ -130,9 +131,9 @@ const Form = ({ recaptchaRef }) => {
   return (
     <form id='contact' className={`${styles.form} mx-auto container-fluid`}>
       <RowTextOnly
-        heading={[`Join `, addBrand(), ` TODAY!`]}
+        heading={[`Join `, addBrand(), ` TODAY!`, <Instagram size={25} />]}
         text={[
-          `Reach out to me on Instagram or just shoot me an email here. Get pumped!`
+          `Reach out to me on Instagram or just shoot me an email here. Get pumped!`,
         ]}
         textStyles={`fs-5 textSilver`}
       />
