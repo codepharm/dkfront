@@ -14,7 +14,7 @@ import overhead from '../../assets/images/overhead.jpg'
 import groupRun from '../../assets/images/groupRun.jpg'
 import deadlift from '../../assets/images/deadlift.jpg'
 import treadmill from '../../assets/images/treadmill.jpg'
-
+import aboutdavid from '../../assets/images/aboutdavid.jpg'
 import styles from './About.module.css';
 
 const About = () => {
@@ -30,39 +30,9 @@ const About = () => {
       textStyles={`fs-4`}
     />
 
-    <RowIcons
-      icon1={{
-        icon: <FaPiggyBank size={40} />,
-        heading: [`Not Your Job`],
-        text: [
-          `The first rule of `,
-          addBrand(),
-          `is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.`
-        ],
-      }}
-      icon2={{
-        icon: <GiArmoredPants size={40} />,
-        heading: [`Not Your Khakis`],
-        text: [
-          `The second rule of `,
-          addBrand(),
-          ` is, "you DO NOT talk about DK Dojo." Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-        ],
-      }}
-      icon3={{
-        icon: <FaPoop size={40} />,
-        heading: [`Just Crap`],
-        text: [
-          `The third rule of `,
-          addBrand(),
-          ` if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.`
-        ],
-      }}
-    />
-
 <div className={`${styles.bg} bg py-5`}>
       <RowSingleImg
-        img={overhead}
+        img={aboutdavid}
         alt={`A winning athlete performing an overhead press with perfect form.`}
         heading={[`Winning.`]}
         text={[`Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deserunt a molestiae incidunt obcaecati corporis harum itaque esse alias magnam!`]}
