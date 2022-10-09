@@ -101,14 +101,6 @@ const Home = () => {
           ],
       }}
     />
-
-    <RowTextOnly
-      heading={[`Join `, addBrand(),` TODAY!`]}
-      text={[
-        `Reach out to me on Instagram or just shoot me an email here. Get pumped!`
-      ]}
-      textStyles={`fs-5`}
-    />
    </div>
   )
 }
