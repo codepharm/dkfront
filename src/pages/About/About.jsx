@@ -1,8 +1,6 @@
 import React from 'react'
 import { AiOutlineDollarCircle } from 'react-icons/ai';
 import { BsTrophy } from 'react-icons/bs';
-import { FaPoop, FaPiggyBank } from 'react-icons/fa';
-import { GiArmoredPants } from 'react-icons/gi';
 import { TbBarbell } from 'react-icons/tb';
 
 import RowIcons from '../../components/Rows/RowIcons/RowIcons';
@@ -10,7 +8,6 @@ import RowSingleImg from '../../components/Rows/RowSingleImg/RowSingleImg';
 import RowImages from '../../components/Rows/RowImages/RowImages';
 import RowTextOnly from '../../components/Rows/RowTextOnly/RowTextOnly';
 import addBrand from '../../utils/addBrand';
-import overhead from '../../assets/images/overhead.jpg'
 import groupRun from '../../assets/images/groupRun.jpg'
 import deadlift from '../../assets/images/deadlift.jpg'
 import treadmill from '../../assets/images/treadmill.jpg'
