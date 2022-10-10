@@ -3,7 +3,7 @@ import { BsInstagram } from 'react-icons/bs';
 import styles from './Instagram.module.css';
 
 // set the instagram url here
-const urlInstagram = `https://www.instagram.com/`;
+const urlInstagram = `https://www.instagram.com/dkuong/`;
 
 const Instagram = ({size}) => {
   return (
