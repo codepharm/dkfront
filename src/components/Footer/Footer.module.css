@@ -1,5 +1,5 @@
 .div {
-  background: rgba(0,0,0,0.65);
+  background: rgba(0, 0, 0, 0.65);
   /* border-radius: 8px 8px 0 0; */
   height: fit-content;
   padding-bottom: 2rem;
@@ -8,22 +8,22 @@
 
 .footer {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer>a,
-.footer>p {
+.footer > a,
+.footer > p {
   margin: auto 0;
   text-decoration: none;
 }
 
-.footer>p>a>span {
+.footer > p > a > span {
   font-style: italic;
   opacity: 0.75;
 }
 
-.footer>p>span>img {
+.footer > p > span > img {
   animation: slowSpin 5s ease-in-out infinite;
   -webkit-filter: drop-shadow(1px 1px 1px black);
   filter: drop-shadow(1px 1px 1px black);
@@ -31,14 +31,14 @@
 
 @keyframes slowSpin {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
 
   50% {
-      transform: scale(-1, 1);
+    transform: scale(-1, 1);
   }
 
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }

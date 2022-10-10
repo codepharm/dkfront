@@ -4,6 +4,14 @@
   align-items: center;
 }
 
+.instagram {
+  top: 100;
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  transform: translateY(3rem);
+}
+
 .header {
   background-image: url('../../assets/images/fitness.jpg');
   background-position: center;
