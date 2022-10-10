@@ -18,7 +18,6 @@ const RowVideo = ({url}) => {
       <iframe
         className={`${styles.iframe} ratio ratio-16x9`}
         src={url}
-        height='100%'
         allowFullScreen
         title='YouTube video player'
       />
