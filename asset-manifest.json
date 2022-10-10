@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7cb2157d.css",
-    "main.js": "/static/js/main.85558583.js",
+    "main.js": "/static/js/main.cfb94e0a.js",
     "static/media/weights.jpg": "/static/media/weights.bfee142097f61dba7418.jpg",
     "static/media/gym.jpg": "/static/media/gym.0580010df6ae2764733d.jpg",
     "static/media/fitness.jpg": "/static/media/fitness.1a1d5e840d9259c82935.jpg",
@@ -12,10 +12,10 @@
     "static/media/aboutdavid.jpg": "/static/media/aboutdavid.6c49bfe2472ca9bcd01b.jpg",
     "index.html": "/index.html",
     "main.7cb2157d.css.map": "/static/css/main.7cb2157d.css.map",
-    "main.85558583.js.map": "/static/js/main.85558583.js.map"
+    "main.cfb94e0a.js.map": "/static/js/main.cfb94e0a.js.map"
   },
   "entrypoints": [
     "static/css/main.7cb2157d.css",
-    "static/js/main.85558583.js"
+    "static/js/main.cfb94e0a.js"
   ]
 }
