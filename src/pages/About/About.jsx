@@ -27,7 +27,7 @@ const About = () => {
       textStyles={`fs-4`}
     />
 
-<div className={`${styles.bg} bg py-5`}>
+    <div className={`${styles.bg} bg py-5`}>
       <RowSingleImg
         img={aboutdavid}
         alt={`A winning athlete performing an overhead press with perfect form.`}
