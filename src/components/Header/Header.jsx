@@ -19,7 +19,7 @@ const Header = () => {
           <h6 className={`${styles.h6}`}>Stay disciplined. Stay true. Attack with consistent persistency.</h6>
           <button onClick={() => scrollToForm()} className={`${styles.button}`}>GET RESULTS</button>
         </div>
-
+        <div id='headerBottom'></div>
       </div>
     </header>
   )
