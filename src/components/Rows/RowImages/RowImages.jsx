@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import spanMap from '../../../utils/spanMap';
 import styles from './RowImages.module.css';
 
 const injectMotionImage = (image) => {
@@ -11,19 +10,6 @@ const injectMotionImage = (image) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       />
-      <div className={`row`}>
-        <div className={`${styles.icon} col-3`}>
-          { spanMap(image.icon) }
-        </div>
-        <div className={`col-9`}>
-          <h5>
-            { spanMap(image.heading) }
-          </h5>
-          <p className='fw-lighter'>
-            { spanMap(image.text) }
-          </p>
-        </div>
-      </div>
     </div>
   )
 }
