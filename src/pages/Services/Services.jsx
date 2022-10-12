@@ -6,9 +6,9 @@ import RowIcons from '../../components/Rows/RowIcons/RowIcons';
 import RowImgText from '../../components/Rows/RowImgText/RowImgText';
 import RowTextOnly from '../../components/Rows/RowTextOnly/RowTextOnly';
 import addBrand from '../../utils/addBrand';
-import gym from '../../assets/images/gym.jpg'
 import weight from '../../assets/images/weights.jpg'
-
+import overshoulders from '../../assets/images/overshoulders.jpg'
+import smallweightsband from '../../assets/images/smallweightsband.jpg'
 import styles from './Services.module.css';
 
 const Services = () => {
@@ -28,8 +28,8 @@ const Services = () => {
 
       <div className={`${styles.bg} bg py-5`}>
         <RowImgText
-          img={gym}
-          alt={`Gym equipment in the background`}
+          img={smallweightsband}
+          alt={`Small weights and resistant band on wooden floor`}
           heading={[`Beginner: Stay Focused`]}
           text={[
             <ul>
@@ -61,8 +61,8 @@ const Services = () => {
         />
 
         <RowImgText
-          img={gym}
-          alt={`Gym equipment in the background`}
+          img={overshoulders}
+          alt={`A woman doing barbell squats in front of a mirror`}
           heading={[`Advanced: Unleash the Beast`]}
           text={[
             <ul>
