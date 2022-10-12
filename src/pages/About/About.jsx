@@ -24,7 +24,7 @@ const About = () => {
       <div className={`${styles.bg} bg py-5`}>
         <RowSingleImg
           img={aboutdavid}
-          alt={`A winning athlete performing an overhead press with perfect form.`}
+          alt={`A picture of David also known as DK`}
           heading={[`Meet DK`]}
           text={[`“It is training only if you improve. Otherwise, it is just suffering.” - DK`]}
         />
@@ -32,12 +32,12 @@ const About = () => {
         <RowImages
           image1={{
             img: treadmill,
-            alt: `Silhouette of a group of people running for fitness.`,
+            alt: `People on treadmills`,
 
           }}
           image2={{
             img: deadlift,
-            alt: `Silhouette of a group of people running for fitness.`,
+            alt: `A person getting ready to deadlift`,
 
           }}
           image3={{

@@ -1,122 +1,90 @@
 import React from 'react'
-import { AiOutlineDollarCircle } from 'react-icons/ai';
-import { BsTrophy } from 'react-icons/bs';
-import { FaPoop, FaPiggyBank } from 'react-icons/fa';
-import { GiArmoredPants } from 'react-icons/gi';
-import { TbBarbell } from 'react-icons/tb';
-
-import RowIcons from '../../components/Rows/RowIcons/RowIcons';
-import RowSingleImg from '../../components/Rows/RowSingleImg/RowSingleImg';
 import RowImages from '../../components/Rows/RowImages/RowImages';
 import RowTextOnly from '../../components/Rows/RowTextOnly/RowTextOnly';
+import RowImgText from '../../components/Rows/RowImgText/RowImgText';
 import addBrand from '../../utils/addBrand';
-import overhead from '../../assets/images/overhead.jpg'
-import groupRun from '../../assets/images/groupRun.jpg'
-import deadlift from '../../assets/images/deadlift.jpg'
-import treadmill from '../../assets/images/treadmill.jpg'
-
+import testimonial1 from '../../assets/images/testimonial1.jpg'
+import testimonial2 from '../../assets/images/testimonial2.jpg'
+import testimonial3 from '../../assets/images/testimonial3.jpg'
+import helplifting from '../../assets/images/helplifting.jpg'
+import intenselifting from '../../assets/images/intenselifting.jpg'
+import seriouslifting from '../../assets/images/seriouslifting.jpg'
+import weighttraining from '../../assets/images/weighttraining.jpg'
+import outdoortraining1 from '../../assets/images/outdoortraining1.jpg'
+import outdoortraining2 from '../../assets/images/outdoortraining2.jpg'
 import styles from './Gallery.module.css';
 
 const Gallery = () => {
   return (
-   <div id='page' className={`${styles.gallery} text-white py-5 container-fluid`}>
-     <RowTextOnly
-      heading={[addBrand(), `'s Gallery`]}
-      text={[
-        `The things you own end up owning you. It's at only after you lose everything that you're free to do anything at `,
-        addBrand(),
-        `.`,
-      ]}
-      textStyles={`fs-4`}
-    />
-
-    <RowIcons
-      icon1={{
-        icon: <FaPiggyBank size={40} />,
-        heading: [`Not Your Job`],
-        text: [
-          `The first rule of `,
+    <div id='page' className={`${styles.gallery} text-white py-5 container-fluid`}>
+      <RowTextOnly
+        heading={[addBrand(), `'s Gallery`]}
+        text={[
+          `Check out what others have to say about the training they received at `,
           addBrand(),
-          `is, "you do not talk about DK Dojo." Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime distinctio tenetur, obcaecati perspiciatis quos.`
-        ],
-      }}
-      icon2={{
-        icon: <GiArmoredPants size={40} />,
-        heading: [`Not Your Khakis`],
-        text: [
-          `The second rule of `,
-          addBrand(),
-          ` is, "you DO NOT talk about DK Dojo." Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-        ],
-      }}
-      icon3={{
-        icon: <FaPoop size={40} />,
-        heading: [`Just Crap`],
-        text: [
-          `The third rule of `,
-          addBrand(),
-          ` if anyone yells stop, goes limp, or taps out, the training session is over. No refunds. Lorem ipsum dolor sit amet consectetur adipisicing elit.`
-        ],
-      }}
-    />
-
-    <div className={`${styles.bg} bg py-5`}>
-      <RowSingleImg
-        img={overhead}
-        alt={`A winning athlete performing an overhead press with perfect form.`}
-        heading={[`Winning.`]}
-        text={[`Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deserunt a molestiae incidunt obcaecati corporis harum itaque esse alias magnam!`]}
+          `.`,
+        ]}
+        textStyles={`fs-4`}
       />
-      
+
+      <div className={`${styles.bg} bg py-5`}>
+        <RowImgText
+          img={testimonial1}
+          alt={`A man doing chest fly resistance training at the gym`}
+          heading={[`I wanted easy..`]}
+          text={[
+            `“I’m always quick to choose the easiest routine when it came to exercise thinking I am doing fine if I stay active. DK showed me I was really making it harder on myself and my body.”`
+          ]}
+        />
+
+        <RowImgText
+          img={testimonial2}
+          alt={`A man doing bicep curls at the gym`}
+          heading={[`I think I know...`]}
+          text={[
+            `“I find it hard to stay in shape when I feel like I’ve figured it all out. DKDojo has really changed my mentality and fitness has become a lifestyle I don’t stress about.”`
+          ]}
+        />
+
+        <RowImgText
+          img={testimonial3}
+          alt={`A man doing bent-over rows at the gym`}
+          heading={[`Count me in...`]}
+          text={[
+            `“I love the group sessions. They are a great way to meet and learn from others who all can inspire me to continue my journey.”`
+          ]}
+        />
+
+        <RowImages
+          image1={{
+            img: helplifting,
+            alt: `Trainer helping a member benchpress at the gym`,
+          }}
+          image2={{
+            img: intenselifting,
+            alt: `Intense man deadlifting at the gym`,
+          }}
+          image3={{
+            img: seriouslifting,
+            alt: `Serious man deadlifting at the gym`,
+          }}
+        />
+      </div>
       <RowImages
         image1={{
-          img: treadmill,
-          alt: `Silhouette of a group of people running for fitness.`,
-          heading: [`Warm-up`],
-          text: [`Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dolorum beatae non!`],
-          icon: [<span className={`fw-light py-2 px-3 fs-4`} style={{borderRadius: '50%', border: '2px solid white'}}>1</span>]
+          img: weighttraining,
+          alt: `A man doing barbell squats at an indoor gym`,
         }}
         image2={{
-          img: deadlift,
-          alt: `Silhouette of a group of people running for fitness.`,
-          heading: [`Lift`],
-          text: [`Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio beatae non!`],
-          icon: [<span className={`fw-light py-2 px-3 fs-4`} style={{borderRadius: '50%', border: '2px solid white'}}>2</span>]
+          img: outdoortraining1,
+          alt: `A man doing bent-over barbell rows between legs at an outdoor gym`,
         }}
         image3={{
-          img: groupRun,
-          alt: `Silhouette of a group of people running for fitness.`,
-          heading: [`Run`],
-          text: [`Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odionon!`],
-          icon: [<span className={`fw-light py-2 px-3 fs-4`} style={{borderRadius: '50%', border: '2px solid white'}}>3</span>]
+          img: outdoortraining2,
+          alt: `A man doing barbell squats at an outdoor gym`,
         }}
       />
     </div>
-
-    <RowIcons
-      icon1={{
-        icon: <TbBarbell size={40} />,
-        heading: [`Best Equipment`],
-        text: [
-            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-          ],
-      }}
-      icon2={{
-        icon: <AiOutlineDollarCircle size={40} />,
-        heading: [`Cost Effective`],
-        text: [
-            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-          ],
-      }}
-      icon3={{
-        icon: <BsTrophy size={40} />,
-        heading: [`Reach Your Goals`],
-        text: [
-            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolores architecto odio dignissimos voluptates veritatis perferendis facilis dolorum beatae non!`
-          ],
-      }}
-    />
-   </div>
   )
 }
 
