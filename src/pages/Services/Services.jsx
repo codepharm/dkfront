@@ -32,9 +32,14 @@ const Services = () => {
           alt={`Gym equipment in the background`}
           heading={[`Beginner: Stay Focused`]}
           text={[
-            `Learn and master proper form. Schedule days off between workouts. Add stretch routines. Remember to incorporate cardio.
-            Establishing the workout routine tailored to you is the easy part. The hard part is conquering your mind and diminishing the fears that hold you back.
-            Stay focused and in control.`,
+            <ul>
+              <li>Getting started, you must first become familiar with fitness.</li>
+              <li>Learn body weight, the practical mechanics of pushing and pulling, and basic movements.</li>
+              <li>Utilize simple items such as a bath towel, stretchy resistant bands, and at-home equipment.</li>
+              <li>Training will consist of high rep count instead of weighted training.</li>
+            </ul>,
+            `Establishing the workout routine tailored to you is the easy part. 
+            The hard part is conquering your mind and diminishing the fears that hold you back. Stay focused and in control.`
           ]}
         />
 
@@ -43,10 +48,14 @@ const Services = () => {
           alt={`Gym equipment in the background`}
           heading={[`Intermediate: Stay Disciplined`]}
           text={[
-            `You've mastered your form. You established consistency in flow and in routine.
-            You have now gotten about 20 to 30 pounds of muscle at this point. 
-            Now shock your muscle into growth.
-            Stay disciplined in power, strength, and endurance.`,
+            <ul>
+              <li>Learn and master proper form.</li>
+              <li>Introduction to the gym – create a proper gym routine instead of walking in confused about where to start.</li>
+              <li>Strategize on how you want to split your days and schedule days off between workouts.</li>
+              <li>Figure out how much weight you should be lifting. Are you looking for tone or muscle mass?</li>
+              <li>Gain knowledge on how to design your own workout routine down the line.</li>
+            </ul>,
+            `Shock your muscle into growth. Stay disciplined in power, strength, and endurance.`
           ]}
           imgRight
         />
@@ -56,8 +65,12 @@ const Services = () => {
           alt={`Gym equipment in the background`}
           heading={[`Advanced: Unleash the Beast`]}
           text={[
-            `The beast inside has now emerged outside in body and spirit. You are doing countless number of sets, twice-daily training, and working multiple muscle groups several times a week. 
-            You've trained your heart to pump blood and oxygen to your cells more efficiently. All your major muscles developed to the point where you are as immense as the beast you felt inside.`,
+            <ul>
+              <li>Determine how far you are willing to push yourself. There are no limits to what you can push or pull. The limits that exist are the ones you set on yourself. You are pushing boundaries, constantly looking to beat your PR (personal record) and pushing weight you never imagined you would.</li>
+              <li>Be one with the machine and one with the iron.</li>
+              <li>Control your animalistic strength. Anyone can let loose, but it takes a strong individual to utilize that ferocity as fuel for strength.</li>
+            </ul>,
+            `The beast inside has now emerged outside in body and spirit. You are doing countless number of sets, twice-daily training, and working multiple muscle groups several times a week. You've trained your heart to pump blood and oxygen to your cells more efficiently. All your major muscles developed to the point where you are as immense as the beast you felt inside.`
           ]}
         />
 
@@ -68,21 +81,37 @@ const Services = () => {
           icon: <TbBarbell size={40} />,
           heading: [`1-On-1 Training`],
           text: [
-            `Receive high-output results-based personal training services in the Philadelphia, Pennsylvania area.`
+            <p>
+              <span>Receive high-output results-based personal training services in the Philadelphia, Pennsylvania area.</span>
+              <br />
+              <span> Rate: $40 per hour</span>
+            </p>
+
           ],
         }}
         icon2={{
           icon: <GiThreeFriends size={40} />,
           heading: [`Group Session`],
           text: [
-            `Join in group events that we host or create your own. We can discuss and develop strategies to best meet your goals.`
+            <p>
+              <span>Join in group events that we host or create your own. We can discuss and develop strategies to best meet your goals.</span>
+              <br />
+              <span>Rate: $20 per person</span>
+            </p>
+
           ],
         }}
         icon3={{
           icon: <MdOutlineComputer size={40} />,
           heading: [`Virtual Coaching`],
           text: [
-            `Stay motivated and be intentional on achieving your end goals by scheduling online sessions.`
+            <p>
+              <span>Stay motivated and be intentional on achieving your end goals by scheduling online sessions.</span>
+              <br />
+              <span>Rate: $30 per hour</span>
+              <br />
+              <span> (Beginner and Intermediate only)</span>
+            </p>
           ],
         }}
       />
