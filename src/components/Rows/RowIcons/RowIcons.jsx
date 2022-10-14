@@ -14,9 +14,9 @@ const injectMotionIcon = (icon) => {
       <h5>
         { spanMap(icon.heading) }
       </h5>
-      <p className='fw-lighter'>
+      <div className='fw-lighter'>
         { spanMap(icon.text) }
-      </p>
+      </div>
     </motion.div>
   )
 }

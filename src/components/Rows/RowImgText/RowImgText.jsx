@@ -10,9 +10,9 @@ const RowImgText = ({img, alt, heading, text, imgRight}) => {
           <h4 className={`fw-light`}>
             { spanMap(heading) }
             </h4>
-          <p className={`fw-lighter`}>
+          <div className={`fw-lighter`}>
             { spanMap(text) }
-          </p>
+          </div>
         </div>
         <motion.div
           className={`col-sm-5`}
@@ -39,9 +39,9 @@ const RowImgText = ({img, alt, heading, text, imgRight}) => {
         <h4 className={`fw-light`}>
           { spanMap(heading) }
         </h4>
-        <p className={`fw-lighter`}>
+        <div className={`fw-lighter`}>
           { spanMap(text) }
-        </p>
+        </div>
       </div>
     </div>
   )
