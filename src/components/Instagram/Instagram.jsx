@@ -18,6 +18,7 @@ const Instagram = ({size}) => {
         target='_blank' rel='noreferrer'
       >
         <BsInstagram size={size} className={`mx-2 ${styles.instagram} rounded`} color={'ghostwhite'} />
+        <span className={`textSilver fs-4`}>dkuong</span>
       </a>
     </motion.div>
   )
