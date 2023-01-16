@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logos/pharma2code.gif';
 import addBrand from '../../utils/addBrand';
-import Instagram from '../Instagram/Instagram';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -14,7 +13,6 @@ export default function Footer() {
           <div className={`mx-2`}>
             {addBrand()}
           </div>
-          <Instagram size={20} />
         </div>
         <hr className={`my-5`} />
         <p className={`text-center`}>
